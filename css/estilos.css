@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img, video, iframe, canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: linear-gradient(180deg, #e0f2fe 0%, #f0f9ff 100%);
+    color: #1e293b;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #0c4a6e; 
+    border-bottom: 3px solid #38bdf8; 
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    box-shadow: 0 4px 12px rgba(12, 74, 110, 0.15);
+}
+
+header h1 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #e0f2fe;
+    text-decoration: none;
+    padding: 0.4rem 0.9rem;
+    border-radius: 6px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(224, 242, 254, 0.2);
+}
+
+nav a:hover {
+    color: #0c4a6e;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+}
+
+
+main {
+    flex: 1;
+    max-width: 1100px;
+    width: 100%;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+}
+
+.perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.tabela-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    main > section:first-child {
+        grid-column: 1 / -1;
+    }
+
+    .perfil {
+        flex-direction: row;
+        text-align: left;
+    }
+}
+
+section {
+    background-color: #ffffff;
+    border: 1px solid #bae6fd;
+    border-radius: 12px;
+    padding: 1.8rem;
+    box-shadow: 0 4px 15px rgba(14, 165, 233, 0.08);
+    transition: all 0.3s ease;
+}
+
+section:hover {
+    border-color: #0284c7;
+    box-shadow: 0 6px 20px rgba(14, 165, 233, 0.2);
+    transform: translateY(-2px);
+}
+
+main h2 {
+    color: #0369a1;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid #38bdf8;
+    display: inline-block;
+}
+
+main p {
+    color: #334155;
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+}
+
+ul {
+    list-style: none;
+    margin-top: 0.8rem;
+}
+
+main section ul li {
+    position: relative;
+    padding-left: 1.4rem;
+    margin-bottom: 0.4rem;
+    color: #475569;
+    font-size: 0.92rem;
+}
+
+main section ul li::before {
+    content: "≈"; 
+    position: absolute;
+    left: 0;
+    color: #0284c7;
+    font-weight: bold;
+}
+
+
+footer {
+    background-color: #0c4a6e;
+    border-top: 3px solid #38bdf8;
+    color: #bae6fd;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.85rem;
+    margin-top: auto;
+}
+/* ===== CP3: botão de tema e mensagens do formulário ===== */
+.btn-tema {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e0f2fe;
+    border: 1px solid rgba(224, 242, 254, 0.2);
+    border-radius: 6px;
+    padding: 0.6rem 0.9rem;
+    font-size: 0.88rem;
+    cursor: pointer;
+}
+
+.btn-tema:hover {
+    background-color: #ffffff;
+    color: #0c4a6e;
+}
+
+.msg-erro {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+    border-radius: 6px;
+    padding: 0.8rem;
+}
+
+.msg-ok {
+    background-color: #dcfce7;
+    color: #166534;
+    border: 1px solid #86efac;
+    border-radius: 6px;
+    padding: 0.8rem;
+}
+
+/* ===== CP3: tema escuro ===== */
+body.escuro {
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+body.escuro section {
+    background-color: #1e293b;
+    border-color: #334155;
+}
+
+body.escuro main h2 {
+    color: #38bdf8;
+}
+
+body.escuro main p,
+body.escuro main section ul li,
+body.escuro table {
+    color: #cbd5e1;
+}
