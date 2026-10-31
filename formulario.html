@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario - Gerdson Luiz</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header>
+        <h1>Gerdson Luiz</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="graficos.html">Gráficos</a></li>
+                <li><a href="multimidia.html">Mídias</a></li>
+                <li><a href="formulario.html">Formulário</a></li>
+                <li><a href="curriculo.html">Currículo</a></li>
+            </ul>
+        </nav>
+        <button type="button" id="btn-tema" class="btn-tema">Tema escuro</button>
+    </header>
+
+    <main>
+        <section>
+            <article>
+                <h2>Entre em Contato!</h2>
+                <p>Preencha o formulário abaixo:</p>
+
+                <form id="form-contato" action="#" method="POST" novalidate style="display: flex; flex-direction: column; gap: 1.2rem; margin-top: 1rem;">
+                    <fieldset style="border: 1px solid #bae6fd; border-radius: 8px; padding: 1.2rem; display: flex; flex-direction: column; gap: 0.8rem;">
+                        <legend style="color: #0369a1; font-weight: bold; padding: 0 0.5rem;">Dados Pessoais</legend>
+                        
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required placeholder="exemplo@email.com">
+
+                        <label for="tel">Telefone (Formato: 11 99999-9999):</label>
+                        <input type="tel" id="tel" name="tel" pattern="[0-9]{2} [0-9]{5}-[0-9]{4}" placeholder="11 99999-9999">
+
+                        <label for="nasc">Data de Nascimento:</label>
+                        <input type="date" id="nasc" name="nasc">
+
+                        <label for="password">Senha:</label>
+                        <input type="password" id="password" name="password" required minlength="6" placeholder="Mínimo 6 caracteres">
+                    </fieldset>
+
+                    <fieldset style="border: 1px solid #bae6fd; border-radius: 8px; padding: 1.2rem; display: flex; flex-direction: column; gap: 0.8rem;">
+                        <legend style="color: #0369a1; font-weight: bold; padding: 0 0.5rem;">Preferências e Mensagem</legend>
+
+                        <label for="cor">Escolha uma cor:</label>
+                        <input type="color" id="cor" name="cor" value="#0284c7">
+
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem aqui..."></textarea>
+                    </fieldset>
+
+                    <button type="submit" style="background-color: #0284c7; color: white; border: none; padding: 0.8rem; border-radius: 6px; font-weight: bold; cursor: pointer;">Enviar Formulário</button>
+
+                    <p id="mensagem-form" role="alert"></p>
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Gerdson Luiz - Trabalho para Entrega CP3, Universidade Braz Cubas. Todos os direitos reservados.</p>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
